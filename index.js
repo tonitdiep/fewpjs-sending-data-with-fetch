@@ -30,39 +30,39 @@
 
 
 
-function submitData( name, email ) {
+// function submitData( name, email ) {
 
-    let configObj = {
-    // fetch("http://localhost:3000/users", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-            },
-        body: JSON.stringify({
-                name,
-                email
-            })
-          } 
+//     let configObj = {
+//     // fetch("http://localhost:3000/users", {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json",
+//             "Accept": "application/json"
+//             },
+//         body: JSON.stringify({
+//                 name,
+//                 email
+//             })
+//           } 
 
-       return fetch("http://localhost:3000/users", configObj)
+//        return fetch("http://localhost:3000/users", configObj)
 
         
-            .then(function(response) {
-                return response.json()
-                // console.log(response)
+//             .then(function(response) {
+//                 return response.json()
+//                 // console.log(response)
                 
-            })
-            .then(function(object) {
-                document.body.innerHTML = object ['id']
-                // console.log(object)
-            })
-            .catch(function(error) {
-                document.body.innerHTML = error.message
-                // console.log(error)
-            })
+//             })
+//             .then(function(object) {
+//                 document.body.innerHTML = object ['id']
+//                 // console.log(object)
+//             })
+//             .catch(function(error) {
+//                 document.body.innerHTML = error.message
+//                 // console.log(error)
+//             })
  
-}
+// }
 
 
 function submitData(name, email) {
@@ -81,11 +81,12 @@ function submitData(name, email) {
         
       })
       .then(function(object) {
-       
-        document.body.innerHTML = object[ "id" ]
+       console.log(object)
+        // document.body.innerHTML = object[ "id" ]
    
       })
       .catch(function(error) {  
-        document.body.innerHTML = error.message
+        // document.body.innerHTML = error.message
+        console.log(error.message)
       })
   }
